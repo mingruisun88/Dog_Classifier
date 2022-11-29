@@ -73,11 +73,15 @@ def get_pet_labels(image_dir):
     filenames = listdir(image_dir)
     results_dic = dict()
     for idx in range(len(filenames)):
-        if filenames[idx] not in results_dic:
-            pet_label = clean_name(filenames[idx])
-            results_dic[filenames[idx]] = [pet_label]
+        ###corner case file name start with '.'
+        if filenames[idx].startswith('.'):
+            pass
         else:
-            print("** Warning: Key=", filenames[idx], 
+            if filenames[idx] not in results_dic:
+                pet_label = clean_name(filenames[idx])
+                results_dic[filenames[idx]] = [pet_label]
+            else:
+                print("** Warning: Key=", filenames[idx], 
                "already exists in results_dic with value =", 
                 results_dic[filenames[idx]])
     return results_dic

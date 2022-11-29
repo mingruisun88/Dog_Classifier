@@ -310,7 +310,7 @@ PetLabelDog: 0  ClassLabelDog: 1
 
  ** Statistics from calculates_results_stats() function:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
-Pct Corr dog: 103.3 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
+Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
 
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
@@ -324,15 +324,18 @@ N Not-Dog Images    :  10
  
 n_dogs_img          :  30
 n_match             :  33
-n_correct_dogs      :  31
+n_correct_dogs      :  30
 n_correct_notdogs   :   9
 n_correct_breed     :  27
 n_images            :  40
 n_notdogs_img       :  10
 pct_match           : 82.5%
-pct_correct_dogs    : 103.3%
+pct_correct_dogs    : 100.0%
 pct_correct_breed   : 90.0%
 pct_correct_notdogs : 90.0%
+
+INCORRECT Dog/NOT Dog Assignments:
+cat                 : norwegian elkhound, elkhound
 
 INCORRECT Dog Breed Assignment:
 Real:             great pyrenees   Classifier:                         kuvasz

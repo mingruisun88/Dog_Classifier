@@ -70,7 +70,9 @@ def classify_images(images_dir, results_dic, model):
         target = buff_list[0]
         #print(images_dir)
         label = classifier(images_dir+'/'+key,model)
-        label=label.lower()
+        ###add strip and lower case to standardize string
+        label=label.lower().strip()
+
         buff_list.append(label)
         if target in label:
             buff_list.append(1)
